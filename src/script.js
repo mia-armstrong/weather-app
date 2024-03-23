@@ -19,7 +19,7 @@ function showWeather(response) {
 
 function search(event) {
     event.preventDefault();
-    geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${document.querySelector('#searchInput').value}&limit=1&appid=${apiKey}`
+    geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${document.querySelector('#searchInput').value}&limit=1&appid=${apiKey}`
     axios.get(geoUrl).then(getCoordinates);
 }
 
@@ -34,7 +34,7 @@ citySearch.addEventListener('click', search);
 
 const apiKey = "451b9a9a0354f7c7ab80d37db307b09e";
 let cityName = "London";
-let geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
+let geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
 
 axios.get(geoUrl).then(getCoordinates);
 
