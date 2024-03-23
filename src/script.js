@@ -19,8 +19,7 @@ function showWeather(response) {
 
 function search(event) {
     event.preventDefault();
-    cityName = document.querySelector('#searchInput').value;
-    geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`
+    geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${document.querySelector('#searchInput').value}&limit=1&appid=${apiKey}`
     axios.get(geoUrl).then(getCoordinates);
 }
 
